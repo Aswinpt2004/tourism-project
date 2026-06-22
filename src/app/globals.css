@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf7f2;
+  --foreground: #1c1917;
+  --kerala-deep: #1b4332;
+  --kerala-green: #2d6a4f;
+  --kerala-moss: #40916c;
+  --kerala-cream: #faf7f2;
+  --kerala-sand: #e8dfd0;
+  --kerala-gold: #bc6c25;
+  --kerala-terracotta: #9c6644;
+  --kerala-muted: #78716c;
+  --kerala-border: #e7e5e4;
+  --kerala-card: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-kerala-deep: var(--kerala-deep);
+  --color-kerala-green: var(--kerala-green);
+  --color-kerala-moss: var(--kerala-moss);
+  --color-kerala-cream: var(--kerala-cream);
+  --color-kerala-sand: var(--kerala-sand);
+  --color-kerala-gold: var(--kerala-gold);
+  --color-kerala-border: var(--kerala-border);
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-display: var(--font-playfair), Georgia, serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Editorial section rhythm */
+.section-pad {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--kerala-sand);
+}
+::-webkit-scrollbar-thumb {
+  background: #a8a29e;
+  border-radius: 4px;
+}
+
+/* Range slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--kerala-sand);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--kerala-green);
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid var(--kerala-green);
+  outline-offset: 2px;
+}
