@@ -29,7 +29,9 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} ${playfair.variable} h-full scroll-smooth`}>
       <body className="min-h-full flex flex-col font-sans antialiased bg-white text-slate-900">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 w-full">
+          <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
+        </main>
         <Footer />
       </body>
     </html>
